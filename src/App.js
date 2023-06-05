@@ -109,7 +109,7 @@ const WeatherApp = () => {
         <input
           placeholder="Search City"
           value={'Search city'}
-          onChange={() => {}}
+          onChange={(e) => {e.target.value}}
         />
         <img
           src={SearchIcon}
