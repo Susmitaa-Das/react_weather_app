@@ -63,6 +63,8 @@ const API_URL = 'https://api.openweathermap.org/data/2.5/weather?'
 
 const WeatherApp = () => {
   const [temperature, setTemperature] = useState(null)
+  const [humidity, setHumidity] = useState(null)
+  const [feels, setFeels] =useState(null)
   const [searchValue, setSearchValue] = useState('')
 
   const searchCity = async (city) => {
@@ -70,10 +72,22 @@ const WeatherApp = () => {
       `${API_URL}q=${city}&appid=6a88ec3937b5a413c685aea098f58e29`
     )
     const data = await response.json()
-      
+    console.log(data)
+    //temparature
+
     const temp = data.main.temp
     const temperatureCelsius = Math.round(temp - 273.15)
     setTemperature(temperatureCelsius)
+    //Humidity
+
+    const humi = data.main.humidity
+    setHumidity(humi)
+
+    //Feels
+    const feel = data.main.feels_like
+    const feelsCelsius = Math.round(feel - 273.15)
+    setFeels(feelsCelsius)
+
   }
 
   useEffect(() => {
@@ -109,6 +123,8 @@ const WeatherApp = () => {
         <div>
           <div>
             <p>The current temperature is: {temperature.toFixed(2)}°C</p>
+            <p>Humidity:{humidity}%</p>
+            <p>Feels_like:{feels.toFixed(2)}°C</p>
           </div>
         </div>
       </div>
