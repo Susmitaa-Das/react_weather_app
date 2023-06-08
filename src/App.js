@@ -122,7 +122,7 @@ const WeatherApp = () => {
       <div>
         <div>
           <div>
-            <p>The current temperature is: {temperature.toFixed(2)}°C</p>
+            <p className='temp'>The current temperature is: {temperature.toFixed(2)}°C</p>
             <p>Humidity:{humidity}%</p>
             <p>Feels_like:{feels.toFixed(2)}°C</p>
           </div>
