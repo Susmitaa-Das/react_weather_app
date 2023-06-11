@@ -87,6 +87,8 @@ import './App.css'
 import SearchIcon from './search.svg'
 import CloudIcon from './cloud.svg'
 
+"http://api.openweathermap.org/geo/1.0/direct?q=Kolkata&limit=5&appid=6a88ec3937b5a413c685aea098f58e29"
+
 const API_URL = 'https://api.openweathermap.org/data/2.5/forecast?'
 
 const WeatherApp = () => {
