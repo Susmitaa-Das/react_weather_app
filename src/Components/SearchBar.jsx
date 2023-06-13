@@ -1,7 +1,6 @@
-import React from 'react';
+import React from 'react'
 import './Search.css'
-import SearchIcon from './search.svg';
-
+import SearchIcon from './search.svg'
 
 const SearchBar = ({ searchValue, setSearchValue, handleSearch }) => {
   return (
@@ -11,9 +10,9 @@ const SearchBar = ({ searchValue, setSearchValue, handleSearch }) => {
         value={searchValue}
         onChange={(e) => setSearchValue(e.target.value)}
       />
-        <img src={SearchIcon} alt="search" onClick={handleSearch} />
+      <img src={SearchIcon} alt="search" onClick={handleSearch} />
     </div>
-  );
-};
+  )
+}
 
-export default SearchBar;
+export default SearchBar
