@@ -14,8 +14,8 @@
 
 body {
   font-family: var(--font-roboto);
-  /* background-color: #212426; */
-  background-color: white;
+  background: url('https://cdn.pixabay.com/photo/2017/10/10/07/48/hills-2836301_1280.jpg');
+  background-size: cover;
 }
 
 .app {
@@ -23,39 +23,16 @@ body {
 
   display: flex;
   justify-content: center;
-  align-items: center;
+   align-items: center; 
   flex-direction: column;
 }
 
 h1 {
+  color: #fff;
   font-size: 3rem;
-  letter-spacing: 0.9px;
-  background: linear-gradient(
-    90deg,
-    rgba(249, 211, 180, 1) 0%,
-    rgba(249, 211, 180, 0) 100%
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  width: fit-content;
 }
 
 
-/* .search button {
-  padding: 20px 40px;
-  border-radius: 0.5rem;
-  margin-left: 15px;
-  color: #a1a1a1;
-  font-family: var(--font-raleway);
-  font-weight: 900;
-  letter-spacing: 0.75px;
-  font-size: 1.25rem;
-  cursor: pointer;
-  background: #1f2123;
-  -webkit-box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527;
-  box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527;
-} */
 
 
 
@@ -63,20 +40,6 @@ h1 {
 @media screen and (max-width: 600px) {
   .app {
     padding: 4rem 2rem;
-  }
-
-  .search {
-    padding: 1rem 1.75rem;
-    width: 100%;
-  }
-
-  .search input {
-    font-size: 1rem;
-  }
-
-  .search img {
-    width: 20px;
-    height: 20px;
   }
 }
 
@@ -89,17 +52,23 @@ h1 {
     font-size: 2rem;
   }
 
-  .container {
-    margin-top: 2rem;
-  }
-
-  .movie {
-    width: "100%";
-    margin: 1rem;
-  }
 }
 
 
+
+.city{
+  font-size: 50px;
+}
+
+
+.box{
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+}
 
 .temp{
   font-size: 48px;
