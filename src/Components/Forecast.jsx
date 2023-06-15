@@ -1,5 +1,6 @@
 import React from 'react'
 import CloudIcon from './cloud.svg'
+import ForecastCard from './ForecastCard'
 
 const Forecast = ({ forecastData }) => {
   if (!forecastData) {
@@ -7,7 +8,7 @@ const Forecast = ({ forecastData }) => {
   }
 
   // Extract forecast details from forecastData
-  const { list,city } = forecastData
+  const { list, city } = forecastData
   const { temp, humidity, feels_like: feels } = list[0].main
 
   // Calculate temperature in Celsius
@@ -26,6 +27,7 @@ const Forecast = ({ forecastData }) => {
       <p className="feel">Feels like {feelsCelsius.toFixed(0)}°C.</p>
       <p className="humi">Humidity: {humidity}%</p>
     </div>
+    <ForecastCard/>
     </div>
   )
 }
