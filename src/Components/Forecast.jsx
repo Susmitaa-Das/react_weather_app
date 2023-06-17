@@ -2,7 +2,6 @@ import React from 'react'
 import CloudIcon from './cloud.svg'
 import ForecastCard from './ForecastCard'
 
-
 const Forecast = ({ forecastData }) => {
   if (!forecastData) {
     return <div>Loading...</div>
@@ -17,23 +16,23 @@ const Forecast = ({ forecastData }) => {
   // Calculate feels like temperature in Celsius
   const feelsCelsius = Math.round(feels - 273.15)
 
-   const dataList = [
-     { dt_txt: list[0].dt_txt },
-     // ... other items in the list
-   ];
+  const dataList = [
+    { dt: list[0].dt },
+    // ... other items in the list
+  ]
 
   return (
     <div>
-    <div className="box">
-      <p className='city'>{city.name}</p>
-      <p className="temp">
-        <img src={CloudIcon} alt="cloud" className="cloud-icon" />
-        {temperatureCelsius.toFixed(0)}°C
-      </p>
-      <p className="feel">Feels like {feelsCelsius.toFixed(0)}°C.</p>
-      <p className="humi">Humidity: {humidity}%</p>
-    </div>
-    <ForecastCard list={dataList}/>
+      <div className="box">
+        <p className="city">{city.name}</p>
+        <p className="temp">
+          <img src={CloudIcon} alt="cloud" className="cloud-icon" />
+          {temperatureCelsius.toFixed(0)}°C
+        </p>
+        <p className="feel">Feels like {feelsCelsius.toFixed(0)}°C.</p>
+        <p className="humi">Humidity: {humidity}%</p>
+      </div>
+      <ForecastCard list={dataList} />
     </div>
   )
 }
