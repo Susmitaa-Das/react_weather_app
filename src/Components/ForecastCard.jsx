@@ -25,7 +25,7 @@ const ForecastCard = ({ list }) => {
 
         return (
           <div key={item.dt}>
-            <p>5 Days forecast</p>
+            <p className='day'>5 Days forecast</p>
             <p>{formattedDate}</p>
           </div>
         )
