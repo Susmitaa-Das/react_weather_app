@@ -7,14 +7,15 @@ const Forecast = ({ forecastData }) => {
     return <div>Loading...</div>
   }
 
-  // Extract forecast details from forecastData
-  const { list, city } = forecastData
-  const { temp, humidity, feels_like: feels } = list[0].main
+   //Extract forecast details from forecastData
+   const { list, city } = forecastData
+   const { temp, humidity, feels_like: feels } = list[0].main
 
-  // Calculate temperature in Celsius
-  const temperatureCelsius = Math.round(temp - 273.15)
-  // Calculate feels like temperature in Celsius
-  const feelsCelsius = Math.round(feels - 273.15)
+  //  Calculate temperature in Celsius
+   const temperatureCelsius = Math.round(temp - 273.15)
+  //  Calculate feels like temperature in Celsius
+   const feelsCelsius = Math.round(feels - 273.15)
+
 
   const dataList = [
     { dt: list[0].dt },
@@ -22,19 +23,21 @@ const Forecast = ({ forecastData }) => {
   ]
 
   return (
-    <div>
-      <div className="box">
-        <p className="city">{city.name}</p>
-        <p className="temp">
-          <img src={CloudIcon} alt="cloud" className="cloud-icon" />
-          {temperatureCelsius.toFixed(0)}°C
-        </p>
-        <p className="feel">Feels like {feelsCelsius.toFixed(0)}°C.</p>
-        <p className="humi">Humidity: {humidity}%</p>
-      </div>
-      <ForecastCard list={dataList} />
-    </div>
-  )
+     <div>
+       <div className="box">
+         <p className="city">{city.name}</p>
+         <p className="temp">
+           <img src={CloudIcon} alt="cloud" className="cloud-icon" />
+           {temperatureCelsius.toFixed(0)}°C
+         </p>
+         <p className="feel">Feels like {feelsCelsius.toFixed(0)}°C.</p>
+         <p className="humi">Humidity: {humidity}%</p>
+       </div>
+       <ForecastCard list={dataList} temperature={temperatureCelsius} humidity={humidity} /> 
+     </div>
+  
+   )
+
 }
 
 export default Forecast

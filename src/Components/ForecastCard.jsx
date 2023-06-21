@@ -1,11 +1,14 @@
 import React, { useState } from 'react'
+import Forecast from './Forecast'
 
-const ForecastCard = ({ list }) => {
+const ForecastCard = ({ list , temperature, humidity }) => {
   const [isExpanded, setIsExpanded] = useState(false)
+ 
 
   const toggleExpand = () => {
     setIsExpanded(!isExpanded)
   }
+  
 
   return (
     <div className="forecast">
@@ -21,18 +24,26 @@ const ForecastCard = ({ list }) => {
           second: 'numeric',
           timeZone: 'UTC',
         }
+
+
         const formattedDate = date.toLocaleDateString('en-US', options)
 
         return (
           <div key={item.dt}>
-            <p className='day'>5 Days forecast</p>
+            <p>5 Days forecast</p>
             <p>{formattedDate}</p>
+            <button className="extend" onClick={toggleExpand}>
+              {isExpanded ? '▼' : '▲'}
+            </button>
+            {isExpanded && (
+              <div>
+               <p>Temperature: {temperature}°C</p>
+                <p>Humidity: {humidity}%</p>
+              </div>
+            )}
           </div>
         )
       })}
-      <button className="extend" onClick={toggleExpand}>
-        {isExpanded ? '▼' : '▲'}
-      </button>
     </div>
   )
 }

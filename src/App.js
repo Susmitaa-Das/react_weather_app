@@ -12,7 +12,7 @@ const API_URL = 'https://api.openweathermap.org/data/2.5/forecast?'
 const WeatherApp = () => {
   const [forecastData, setForecastData] = useState(null)
   const [searchValue, setSearchValue] = useState('')
-
+ 
   const searchCity = async (city) => {
     const response = await fetch(
       `${API_URL}q=${city}&appid=6a88ec3937b5a413c685aea098f58e29`
