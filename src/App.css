@@ -53,15 +53,13 @@ h1 {
 }
 
 .box {
-  color: #fff;
+  /* color: #fff;
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(5px);
   border-radius: 8px;
   padding: 2rem;
-  text-align: center;
-}
+  text-align: center; */
 
-.forecast {
   color: #fff;
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(5px);
@@ -69,17 +67,41 @@ h1 {
   padding: 2rem;
   text-align: center;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.forecast {
+  /* color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  margin: 4rem 0 2rem; */
+
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
   margin: 4rem 0 2rem;
 }
 
 .temp {
   font-size: 48px;
+  margin-bottom: 1rem;
 }
 .feel {
   font-size: 28px;
+  margin-bottom: 1rem;
 }
 .humi {
   font-size: 20px;
+  margin-bottom: 1rem;
 }
 
 .cloud-icon {
@@ -90,13 +112,12 @@ h1 {
 
 .extend {
   background: none;
-  font-size: 16px;
+   font-size: 16px; 
   border: none;
-  padding: 5;
+   padding: 5; 
   color: white;
-  margin-top: 16px;
+   margin-top: 16px; 
 }
-
 
 
 
