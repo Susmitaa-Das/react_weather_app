@@ -69,6 +69,7 @@
           
            {isExpanded && (
              <div>
+              <p> 5 days Forecast</p>
                <p>Temperature: {item.temperatureCelsius}°C</p>
                <p>Humidity: {humidity}%</p>
              </div>
