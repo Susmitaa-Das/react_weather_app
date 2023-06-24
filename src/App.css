@@ -72,24 +72,7 @@ h1 {
   align-items: center;
 }
 
-.forecast {
-  /* color: #fff;
-  background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(5px);
-  border-radius: 8px;
-  padding: 2rem;
-  text-align: center;
-  display: flex;
-  margin: 4rem 0 2rem; */
 
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(5px);
-  border-radius: 8px;
-  padding: 2rem;
-  text-align: center;
-  margin: 4rem 0 2rem;
-}
 
 .temp {
   font-size: 48px;
@@ -118,6 +101,8 @@ h1 {
   color: white;
    margin-top: 16px; 
 }
+
+
 
 
 
