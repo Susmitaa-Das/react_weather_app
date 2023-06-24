@@ -50,6 +50,7 @@
  import React from 'react';
  import CloudIcon from './cloud.svg';
  import ForecastCard from './ForecastCard';
+ 
 
  const Forecast = ({ forecastData }) => {
    if (!forecastData) {

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Forecast from './Forecast'
+import './ForecastCard.css'
 
 const ForecastCard = ({ list, temperature, humidity }) => {
   // const [isExpanded, setIsExpanded] = useState(false)
