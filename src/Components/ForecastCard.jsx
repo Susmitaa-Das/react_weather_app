@@ -76,6 +76,7 @@ const ForecastCard = ({ list, temperature, humidity }) => {
 
             <div>
               <p>5 Days Forecast</p>
+              <p>How the weather is</p>
               <p>Temperature: {item.temperatureCelsius}°C</p>
               <p>Humidity: {humidity}%</p>
             </div>
