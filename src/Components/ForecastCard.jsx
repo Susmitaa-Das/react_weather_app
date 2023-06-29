@@ -56,6 +56,8 @@ const ForecastCard = ({ list, temperature, humidity }) => {
           minute: 'numeric',
           day: 'numeric',
           hour12: true,
+
+          hnhnhn
         })
         return (
           <div key={item.dt}>
